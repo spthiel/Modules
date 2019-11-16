@@ -1,0 +1,251 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none
+}
+
+body {
+    margin: 0;
+    background-color: #36393f;
+}
+
+#scroller {
+    width: 80%;
+    margin: auto;
+    margin-top: 5px;
+}
+
+.element {
+    border: 3px solid black;
+    border-radius: 5px;
+    background: black;
+}
+
+.element:nth-child(n+1) {
+    margin-top: 4px;
+}
+
+.header {
+    padding: 4px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    background-color: #1b1c1f;
+    transition: .2s;
+}
+
+.element.expanded .header {
+    border-bottom: 3px solid black;
+}
+
+.element:hover .header {
+    background: #2f3136;
+}
+
+.name {
+    display: block;
+}
+
+.main {
+    display: flex;
+}
+
+.expand {
+    width: 30px;
+}
+
+.element:not(.expanded) .description {
+    max-height: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition-duration: .2s;
+    background: #26282c;
+}
+
+.element.expanded .description {
+    display: none;
+}
+
+.description:empty {
+    display: none;
+}
+
+.element:hover:not(.expanded) .description {
+    padding: 2px;
+    max-height: 1em;
+    line-height: 1em;
+    border-top: 3px solid black;
+}
+
+.element:not(.expanded) .description > br {
+    display: none;
+}
+
+/*  -------------- Content ---------------  */
+
+.element:not(.expanded) .right,
+.element:not(.expanded) .author,
+.element:not(.expanded) .left,
+.element:not(.expanded) .changelog {
+    display: none;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    flex-grow: 1;
+    padding: 2px;
+}
+
+.right {
+    margin: 2px;
+    padding: 3px;
+    display: block;
+    background: #202226;
+} 
+
+.downloads {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: right
+}
+
+.author,
+.right,
+.actions,
+.iterators,
+.events,
+.variables,
+.changelog {
+    border: 2px solid black;
+}
+
+.actions:empty,
+.iterators:empty,
+.events:empty,
+.variables:empty {
+    display:none;
+}
+
+.actions,
+.iterators,
+.events {
+    margin-bottom: 2px;
+}
+
+.author, 
+.changelog {
+    margin: 0px 2px 2px 2px;
+    display: flex;
+    flex-direction: column;
+}
+
+.author,
+.changelog span {
+    padding: 3px;
+}
+
+.entry {
+    display: flex;
+    padding: 3px;
+}
+
+.author,
+.changelog span:nth-child(1),
+.entry:nth-child(1) {
+    background: #202226;
+}
+
+
+.changelog span:nth-child(2n+2),
+.entry:nth-child(2n+2) {
+    background-color: #36393f;
+}
+
+.changelog span:nth-child(2n+3),
+.entry:nth-child(2n+3) {
+    background-color: #26282c;
+}
+
+.cmdusage {
+    display: block;
+    padding-right: 4px;
+    border-right: 2px dotted black;
+    font-family: monospace;
+    font-size: large;
+}
+
+.cmddescription {
+    display: block;
+    flex-grow: 1;
+    padding-left: 4px;
+}
+
+/*  --------------  Links ---------------- */
+
+a {
+    color: #6b6b6b;
+}
+
+a:hover {
+    color: white;
+}
+
+/*  --------------  Icons ----------------  */
+
+.icon {
+    position: relative;
+}
+
+.arrow:after,
+.arrow:before {
+    border: .1rem solid currentColor;
+    border-bottom: 0;
+    border-right: 0;
+    height: .65em;
+    width: .65em;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transition: .2s; 
+}
+
+.expanded .arrow:after {
+    color: rgb(182, 5, 5);
+}
+
+.element:not(.expanded) .arrow:after {
+    color: rgb(12, 83, 12);
+}
+
+.expanded .arrow:before {
+    border-width: .4rem;
+    top: 48%;
+    height: .60em;
+    width: .60em;
+    color: black;
+}
+
+.element:not(.expanded) .arrow:before {
+    border-width: .4rem;
+    top: 50%;
+    height: .60em;
+    width: .60em;
+    color: black;
+}
+
+.element:not(.expanded) .arrow:before,
+.element:not(.expanded) .arrow:after {
+    transform: translate(-50%,-75%) rotate(225deg);
+}
+
+.expanded .arrow:before,
+.expanded .arrow:after  {
+    transform: translate(-50%,-25%) rotate(45deg);
+}

@@ -1,0 +1,36 @@
+.white {
+    color:white;
+}
+
+.gray {
+    color: rgb(196, 196, 196);
+}
+
+.green {
+    color: lime;
+}
+
+.red {
+    color: red;
+}
+
+.bold {
+    font-weight: bolder;
+}
+
+.large {
+    font-size: 22px;
+}
+
+.borderbelow {
+    border-bottom: 2px solid black;
+}
+
+[empty] {
+    display: none;
+}
+
+.spin {
+    transform: rotate(360deg);
+    transition: .4s;
+}
