@@ -125,8 +125,17 @@ function addListeners() {
 }
 
 function listener(e) {
-    for(let i = 0; i < e.path.length; i++) {
-        let element = e.path[i];
+    let path;
+    if(e.path) {
+        path = e.path;
+    } else if(e.composedPath) {
+        path = e.composedPath();
+    } else {
+        alert("Your browser does not support required functionality. Please use Chrome or Firefox");
+        return;
+    }
+    for(let i = 0; i < path.length; i++) {
+        let element = path[i];
         if(!element) {
             continue;
         }
