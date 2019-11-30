@@ -91,7 +91,7 @@ window.onload = () => {
         scroller.appendChild(buildModule(onlyShow, true));
     } else {
         for(let i = 0; i < modules.length; i++) {
-            scroller.appendChild(buildModule(modules[i],document.location.hash != "" && document.location.hash === "#" + module.name.replace(" ","")));
+            scroller.appendChild(buildModule(modules[i],document.location.hash != "" && document.location.hash === "#" + modules[i].name.replace(" ","")));
         }
     }
     addListeners();
