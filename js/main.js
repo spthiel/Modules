@@ -226,14 +226,19 @@ function populateDownloads(string, downloads) {
             let download = downloads[i];
             let url = "";
             let api = "";
+            let version = "";
             if(download.download) {
                 url = download.download;
             }
             if(download.api) {
                 api = download.api;
             }
+            if(download.version) {
+                version = "v" + download.version;
+            }
             string = string.replace(/\[%URL]/g,url);
             string = string.replace(/\[%VERSION]/g, api);
+            string = string.replace(/\[%MVERSION]/g, version);
         }
         string = string.replace(/\[%LINK]/g,"");
     } else {

@@ -47,7 +47,7 @@ var entryHTML = `<div class="entry">
 [%NEXT]
 `
 
-var downloadHTML =  `<a href="[%URL]">API [%VERSION]</a>
+var downloadHTML =  `<a href="[%URL]">API [%VERSION] [%MVERSION]</a>
 [%LINK]`
 
 var changelogHTML = `<span class="gray">API [%VERSION] [%DATE]<br>
@@ -107,8 +107,8 @@ class Module {
         return this;
     }
 
-    addDownload = (api,download) => {
-        this.downloads.push({"download":download,"api":api});
+    addDownload = (api,download,version) => {
+        this.downloads.push({"download":download,"api":api, "version":version});
         this.downloads.sort((a,b) => {return b.api - a.api});
         return this;
     }
