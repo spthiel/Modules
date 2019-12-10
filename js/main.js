@@ -6,7 +6,7 @@ function checkDlQuery() {
     let name = getElementWithKey(args,"name");
     if(getElementWithKey(args,"api") && name) {
         let api = getElementWithKey(args,"api").value;
-        name = name.value;
+        name = name.value.toLowerCase();
         console.log(api,name)
         for(let i = 0; i < modules.length; i++) {
             let module = modules[i];
