@@ -281,5 +281,5 @@ function expandCodes(string) {
 }
 
 function escape(string) {
-    return string.replace("&","&amp;").replace("<","&lt").replace(">","&gt").replace("\"","&quot;").replace("'","&apos;");
+    return string.replace(/&/g,"&amp;").replace(/</g,"&lt").replace(/>/g,"&gt").replace(/\"/g,"&quot;").replace(/'/g,"&apos;");
 }
