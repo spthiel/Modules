@@ -18,7 +18,7 @@ new Module("Utils")
 .addDownload(17,"http://modules.gorlem.ml/download/0BxhkVZpaJtV3QjBZMWQ0X2NnWUE")
 .addDownload(26,"https://www.dropbox.com/s/42de5v4sq2alpdg/module_utils-1.0-26.1-0.15.4-mc1.12.1.jar?dl=0");
 
-new Module("Utilites")
+new Module("Utilities")
 .setAuthor("spthiel")
 .setDescription("Adds useful functionaility to macromod.")
 .addAction("[&result =] EVAL([&result],<expression string>)","Evaluates a mathematical expression")
