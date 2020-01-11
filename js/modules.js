@@ -18,6 +18,20 @@ new Module("Utils")
 .addDownload(17,"http://modules.gorlem.ml/download/0BxhkVZpaJtV3QjBZMWQ0X2NnWUE")
 .addDownload(26,"https://www.dropbox.com/s/42de5v4sq2alpdg/module_utils-1.0-26.1-0.15.4-mc1.12.1.jar?dl=0");
 
+new Module("Utilites")
+.setAuthor("spthiel")
+.setDescription("Adds useful functionaility to macromod.")
+.addAction("[&result =] EVAL([&result],<expression string>)","Evaluates a mathematical expression")
+.addAction("CHAR(<&char>,<decimal unicode value>)","Puts the character of set unicode value into &char")
+.addAction("MOD(<#result>,<num1>,<num2>)","Evaluates num1 modulo num2")
+.addAction("OLDNAME(<&names[]>,<username>)","Gets the past names of a user")
+.addAction("READFILE(<&content[]>,<filename>)","Gets the content of a file")
+.addAction("[#seconds =] UNIX([#seconds],[#milliseconds])","Gets the seconds and optional milliseconds of current timestamp")
+.addChangelog(26)
+    .addLine("Initial publish")
+    .build()
+.addDownload(26,"./modules/utilities/module_Utilities-1.12.1-26.1-0.15.4-mc1.12.1.jar");
+
 new Module("Documentor")
 .setAuthor("spthiel")
 .setDescription("Let's you create custom or replace existing documentation entries for macromod")
