@@ -165,7 +165,7 @@ function textToClipboard (text) {
     document.body.removeChild(dummy);
 }
 
-const linkformat = "%ORIGIN%PATHNAME#%HASH".replace("%ORIGIN",document.location.origin).replace("%PATHNAME",document.location.pathname);
+const linkformat = "%ORIGIN%PATHNAME?name=%HASH".replace("%ORIGIN",document.location.origin).replace("%PATHNAME",document.location.pathname);
 
 function buildHTMLString(module) {
     let string = elementHTML;
