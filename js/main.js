@@ -6,6 +6,10 @@ function checkDlQuery() {
     let name = getElementWithKey(args,"name");
     if(getElementWithKey(args,"api") && name) {
         let api = getElementWithKey(args,"api").value;
+        let version = getElementWithKey(args, "v");
+        if(version) {
+            version = version.value;
+        }
         name = name.value.toLowerCase();
         console.log(api,name)
         for(let i = 0; i < modules.length; i++) {
@@ -15,7 +19,11 @@ function checkDlQuery() {
                     let download = module.downloads[j];
                     console.log(download.api)
                     if(download.api == api) {
-                        console.log(download)
+                        if(version) {
+                            if(download.version !== version) {
+                                continue;
+                            }
+                        }
                         document.location.replace(download.download);
                         return;
                     }
