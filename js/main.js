@@ -197,14 +197,19 @@ function populateChangelog(string, changelogs) {
             let changelog = changelogs[i];
             let api = "";
             let date = "";
+            let version = "";
             if(changelog.api) {
                 api = changelog.api;
             }
             if(changelog.date) {
                 date = "(" + changelog.date + ")";
             }
+            if(changelog.version) {
+                version = "v" + changelog.version;
+            }
             string = string.replace(/\[%DATE]/g,date);
             string = string.replace(/\[%VERSION]/g,api);
+            string = string.replace(/\[%MVERSION]/g,version);
             string = populateLines(string, changelog.lines)
         }
         string = string.replace(/\[%CHANGELOG]/g,"");

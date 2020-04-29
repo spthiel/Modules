@@ -50,7 +50,7 @@ var entryHTML = `<div class="entry">
 var downloadHTML =  `<a href="[%URL]">API [%VERSION] [%MVERSION]</a>
 [%LINK]`
 
-var changelogHTML = `<span class="gray">API [%VERSION] [%DATE]<br>
+var changelogHTML = `<span class="gray">API [%VERSION] [%DATE] [%MVERSION]<br>
 [%LINE]
 </span>
 [%CHANGELOG]`
@@ -113,8 +113,8 @@ class Module {
         return this;
     }
     
-    addChangelog = (api, date) => {
-        return new Changelog(api, date, this);
+    addChangelog = (api, date, version) => {
+        return new Changelog(api, date, version, this);
     }
 
     putChangelog = (json) => {
@@ -129,12 +129,14 @@ class Changelog {
     api;
     date;
     lines = [];
+    version;
 
     module;
 
-    constructor(api, date, module) {
+    constructor(api, date, version, module) {
         this.api = api;
         this.date = date;
+        this.version = version;
         this.module = module;
     }
 
@@ -144,7 +146,7 @@ class Changelog {
     }
 
     build = () => {
-        let out = {"api": this.api, "date": this.date, "lines": this.lines};
+        let out = {"api": this.api, "date": this.date, "lines": this.lines, "version": this.version};
         this.module.putChangelog(out);
         return this.module;
     }
