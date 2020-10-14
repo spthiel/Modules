@@ -1,4 +1,4 @@
-new Module("BaritoneModule")
+new Module("BaritoneAddon")
 .setAuthor("Numericly")
 .setDescription("This module integrates baritone without using chat")
 .addAction("BARITONE(<anycommand>)","Runs any baritone command BARITONE(GOTO ~ ~ ~10)")
