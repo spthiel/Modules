@@ -335,6 +335,7 @@ new Module("WindowsNotifications")
 .addChangelog(26, "18/feb/21", "1.1")
     .addLine("Fixed the tray image")
     .addLine("Fixed a bug with the creation of constantly new icons. (Now it will always be 1)")
+    .build()
 .addChangelog(26)
     .addLine("Initial release")
     .build();
