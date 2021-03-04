@@ -326,10 +326,15 @@ new Module("FileIO")
     .build();
 
 new Module("WindowsNotifications")
-.setAuthor("spthiel")
+.setAuthor("spthiel, updated by 502")
 .setDescription("Display windows system notifications with a simple command.")
 .addAction("NOTIFY([title],[message])","Creates a system tray")
-.addDownload(26,"./modules/windowsnotifications/module_notifications-1.0-26.1-0.15.4-mc1.12.1.jar")
+.addDownload(26,"./modules/windowsnotifications/module_notifications-1.0-26.1-0.15.4-mc1.12.1.jar", "1.0")
+.addDownload(16,"./modules/windowsnotifications/module_notifications-api16_v1.0.jar", "1.1")
+.addDownload(26,"./modules/windowsnotifications/module_notifications-1.1-26.1-0.15.4-mc1.12.1.jar", "1.1")
+.addChangelog(26, "18/feb/21", "1.1")
+    .addLine("Fixed the tray image")
+    .addLine("Fixed a bug with the creation of constantly new icons. (Now it will always be 1)")
 .addChangelog(26)
     .addLine("Initial release")
     .build();
