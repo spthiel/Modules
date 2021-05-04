@@ -496,6 +496,6 @@ new Module("Reconnect")
 .addVariable("RECONNECT","True if the module is enabled")
 .addDownload(16,"./modules/reconnect/module_reconnect_api16_v0.1.jar")
 .addDownload(26,"./modules/reconnect/module_reconnect_api26_v0.1.jar")
-.addChangelog(26,"30/apr/14")
+.addChangelog(26,"30/apr/21")
     .addLine("Initial release")
     .build();
