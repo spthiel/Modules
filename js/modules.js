@@ -503,3 +503,22 @@ new Module("Reconnect")
 .addChangelog(26,"30/apr/21")
     .addLine("Initial release")
     .build();
+
+
+new Module("Functions")
+.setAuthor("Gorlem")
+.setDescription("Adds functions to macromod.")
+.addAction("function <fucntionname>([...parameters])","Starts a new function block")
+.addAction("endfunction","Ends a function block")
+.addAction("[value =] <functionname>([...parameters])","Calls the function")
+.addAction("return <value>","Sets the return value of the function and stops it")
+.addAction("call(<functionname>,[...parameters])","Sets the return value of the function and stops it")
+.addVariable("MODULEFUNCTIONS","True if the module is enabled")
+.addDownload(26,"https://github.com/Gorlem/functions-module/releases/download/v0.2/module_functions-0.2-26.1-0.15.4-mc1.12.1.jar", "0.2")
+.addChangelog(26,"14/may/21")
+    .addLine("Fix strings not working as parameter")
+    .addLine("Fix integer variables not working in conditions")
+    .build();
+.addChangelog(26,"13/may/21")
+    .addLine("Initial release")
+    .build();
