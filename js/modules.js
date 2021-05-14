@@ -518,7 +518,7 @@ new Module("Functions")
 .addChangelog(26,"14/may/21")
     .addLine("Fix strings not working as parameter")
     .addLine("Fix integer variables not working in conditions")
-    .build();
+    .build()
 .addChangelog(26,"13/may/21")
     .addLine("Initial release")
     .build();
