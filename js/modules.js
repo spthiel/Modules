@@ -570,3 +570,13 @@ new Module("Functions")
 .addChangelog(26,"13/may/21", "0.1")
     .addLine("Initial release")
     .build();
+
+
+new Module("CodeExporter")
+.setAuthor("Elspeth")
+.setDescription("Allows to export all currently running scripts into files.")
+.addAction("codeexport([&directory])","Exports all currently running code into the specified directory or macros/exports by default")
+.addDownload(26,"./modules/codeexporter/module_CodeExporter-1.0-26.1-0.15.5-mc1.12.1.jar")
+.addChangelog(26,"27/aug/21")
+    .addLine("Initial release")
+    .build();
