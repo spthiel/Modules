@@ -49,6 +49,10 @@ new Module("Utils")
 .addIterator("actions","Iterates over a list of all actions. Possible variables: %ACTIONNAME% %ACTIONUSAGE% %ACTIONRETURN% %ACTIONDESCRIPTION%")
 .addIterator("events","Iterates over a list of all events. Possible variables: %EVENTNAME% %EVENTID% %EVENTHELP[]%")
 .addIterator("iterators","Iterates over a list of all iterators. Possible variables: %ITERATORNAME%")
+.addChangelog(26,"05/sep/21")
+    .addLine("Fixed trim")
+    .addLine("Fixed download url")
+    .build()
 .addChangelog(26,"15/nov/19")
     .addLine("Updated to API 26")
     .build()
@@ -56,7 +60,7 @@ new Module("Utils")
     .addLine("Initial release")
     .build()
 .addDownload(17,"http://modules.gorlem.ml/download/0BxhkVZpaJtV3QjBZMWQ0X2NnWUE")
-.addDownload(26,"https://www.dropbox.com/s/42de5v4sq2alpdg/module_utils-1.0-26.1-0.15.4-mc1.12.1.jar?dl=0");
+.addDownload(26,"./modules/utils/module_utils-1.0-26.1-0.15.4-mc1.12.1.jar");
 
 new Module("Utilities")
 .setAuthor("spthiel")
@@ -80,7 +84,7 @@ new Module("Documentor")
 .addChangelog(26,"02/nov/18")
     .addLine("Initial release")
     .build()
-.addDownload(26,"https://cdn.discordapp.com/attachments/505815454468800517/507896476681371658/module_documentorAPI-0.1-26.1-0.15.4-mc1.12.1.jar");
+.addDownload(26,"./modules/documentor/module_documentorAPI-1.0-26.1-0.15.4-mc1.12.1.jar");
 
 new Module("Klacaiba")
 .setAuthor("spthiel")
