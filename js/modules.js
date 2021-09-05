@@ -84,7 +84,7 @@ new Module("Documentor")
 .addChangelog(26,"02/nov/18")
     .addLine("Initial release")
     .build()
-.addDownload(26,"./modules/documentor/module_documentorAPI-1.0-26.1-0.15.4-mc1.12.1.jar");
+.addDownload(26,"./modules/documentor/module_documentorAPI-0.1-26.1-0.15.4-mc1.12.1.jar");
 
 new Module("Klacaiba")
 .setAuthor("spthiel")
