@@ -540,7 +540,7 @@ new Module("Reconnect")
 
 new Module("Functions")
 .setAuthor("Gorlem")
-.setDescription("Adds functions to macromod.")
+.setDescription("Adds functions to macromod. | Gorlem's github: https://github.com/Gorlem/functions-module")
 .addAction("function <functionname>([...parameters])","Starts a new function block")
 .addAction("endfunction","Ends a function block")
 .addAction("[value =] call(<functionname>,[...parameters])","Calls the function")
