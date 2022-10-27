@@ -179,7 +179,7 @@ function buildHTMLString(module) {
     let string = elementHTML;
     string = string.replace(/\[%NAME]/g, module.name);
     string = string.replace(/\[%AUTHOR]/g, module.author ? module.author : "");
-    string = string.replace(/\[%DESC]/g, module.description ? module.description : "");
+    string = string.replace(/\[%DESC]/g, module.description ? expandCodes(module.description) : "");
     string = string.replace(/\[%JUMPLINK]/g, linkformat.replace("%HASH",module.name.replace(" ","")))
     string = populateList(string, module.actions, "ACTION", "action", "AEMPTY");
     string = populateList(string, module.iterators, "ITERATOR", "iterator", "IEMPTY");
